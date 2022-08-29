@@ -14,7 +14,7 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '',
+            'cookieValidationKey' => '1adfadfasdfasdg23',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -53,6 +53,13 @@ $config = [
         */
     ],
     'params' => $params,
+    'language' => 'id-ID',
+    'container' => [
+        'definitions'=>[
+            \yii\widgets\LinkPager::class=>\yii\bootstrap4\LinkPager::class,
+            \yii\widgets\ActiveForm::class=>\yii\bootstrap4\ActiveForm::class,
+        ]
+    ]
 ];
 
 if (YII_ENV_DEV) {
