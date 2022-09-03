@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 29, 2022 at 06:52 AM
+-- Generation Time: Sep 03, 2022 at 06:50 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.23
 
@@ -40,7 +40,9 @@ CREATE TABLE `barang` (
 
 INSERT INTO `barang` (`barang_id`, `nama_barang`, `harga_satuan`, `stok`) VALUES
 (1, 'keyboard', 50000, 4),
-(2, 'adflaf', 45, 6);
+(2, 'adflaf', 45, 6),
+(3, 'adflaf', 5465, 1),
+(4, 'aaa', 33, 33);
 
 -- --------------------------------------------------------
 
@@ -60,7 +62,10 @@ CREATE TABLE `pelanggan` (
 --
 
 INSERT INTO `pelanggan` (`pelanggan_id`, `nama_pelanggan`, `alamat`, `nomor_hp`) VALUES
-(1, 'pelanggan1', 'ga punya rumah', '1067460');
+(1, 'pelanggan1', 'ga punya rumah', '1067460'),
+(2, 'andi', 'Jl. Setia \r\nBudi', '3546540'),
+(3, 'Eko', 'Jl. Ahmad Yani', '4512526'),
+(4, 'qgfqertq', 'qerqwetq', '356345');
 
 -- --------------------------------------------------------
 
@@ -81,6 +86,8 @@ CREATE TABLE `penjualan` (
 --
 
 INSERT INTO `penjualan` (`nomor_nota`, `tanggal`, `pelanggan_id`, `total`, `user_id`) VALUES
+('1662176640', '2022-09-03', 3, 0, 1),
+('1662176950', '2022-09-03', 4, 0, 1),
 ('aaa', '2022-08-12', 1, 10000, 1);
 
 -- --------------------------------------------------------
@@ -195,13 +202,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `barang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `barang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `pelanggan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `pelanggan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `penjualan_detail`
